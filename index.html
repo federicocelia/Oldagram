@@ -21,6 +21,14 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
+    <!-- Load Font Awesome 7.0.1 from CDNJS for icon support -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header class="header">
@@ -38,6 +46,43 @@
 
     <main id="posts-container">
       <!-- Posts Dynamically rendered here by JavaScript -->
+      <div class="post-title">
+        <div class="wrapper">
+          <img
+            src="./images/user-avatar.jpg"
+            alt="user-avatar-picture"
+            class="avatar profile-picture"
+          />
+        </div>
+        <div class="post-info">
+          <h2>Vincent Van Gogh</h2>
+          <p>Zuderth, Netherlands</p>
+        </div>
+      </div>
+      <div class="post-img">
+        <img
+          src="./images/post-vangogh.jpg"
+          alt="Van Gogh Self-Portrait(1889)"
+          class="post-img"
+        />
+      </div>
+      <div class="post-socials-shares">
+        <div class="social-icons">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-regular fa-comment fa-rotate-270"></i>
+          <i
+            class="fa-regular fa-paper-plane fa-rotate-by"
+            style="--fa-rotate-angle: 20deg"
+          ></i>
+        </div>
+        <div class="likes"><p>21,492 likes</p></div>
+        <div class="comments">
+          <p>
+            <span class="comment-author">vincey1853</span> just took a few
+            mushrooms lol
+          </p>
+        </div>
+      </div>
     </main>
 
     <!-- JavaScript -->
