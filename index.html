@@ -31,15 +31,15 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header>
       <div class="logo-wrapper">
         <svg
           width="127"
-          height="34"
-          viewBox="0 0 127 34"
+          height="33"
+          viewBox="0 0 127 33"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          alt="Oldagram logo"
+          aria-label="Oldagram logo"
           class="logo"
         >
           <path
@@ -57,9 +57,10 @@
       </div>
     </header>
 
-    <main id="posts-container">
+    <main class="posts-container">
+      <h1 class="visually-hidden">Oldagram feed</h1>
       <!-- Posts Dynamically rendered here by JavaScript -->
-      <div class="post width">
+      <div class="post container-width">
         <div class="post-title">
           <div class="wrapper">
             <img
@@ -73,7 +74,7 @@
             <p class="small-text">Zuderth, Netherlands</p>
           </div>
         </div>
-        <div class="post-img">
+        <div class="post-img-container">
           <img
             src="./images/post-vangogh.jpg"
             alt="Van Gogh Self-Portrait(1889)"
@@ -82,11 +83,25 @@
         </div>
         <div class="post-socials-shares">
           <div class="social-icons">
-            <i class="fa-regular fa-heart"></i>
-            <i class="fa-regular fa-comment fa-rotate-270"></i>
             <i
-              class="fa-regular fa-paper-plane fa-rotate-by"
+              class="icons fa-regular fa-heart"
+              role="button"
+              tabindex="0"
+              aria-label="Like post"
+            ></i>
+
+            <i
+              class="icons fa-regular fa-comment fa-rotate-270"
+              role="button"
+              tabindex="0"
+              aria-label="Comment post"
+            ></i>
+            <i
+              class="icons fa-regular fa-paper-plane fa-rotate-by"
               style="--fa-rotate-angle: 20deg"
+              role="button"
+              tabindex="0"
+              aria-label="Share post"
             ></i>
           </div>
           <div class="likes bold big-text">
