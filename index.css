@@ -5,6 +5,9 @@ body {
   display: flex;
   justify-content: center;
   background-color: #ededed;
+  font-family:
+    "Source Sans 3", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  font-optical-sizing: auto;
 }
 
 header {
