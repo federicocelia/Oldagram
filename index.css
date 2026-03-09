@@ -1,5 +1,38 @@
-html, body {
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #ededed;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 16px;
+  width: 375px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ededed;
+}
+
+.logo {
+  width: 127px;
+}
+
+.avatar {
+  width: 34px;
+  border-radius: 50%;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.img-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* or contain */
+  align-items: center;
+  justify-content: space-between;
+}
