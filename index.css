@@ -181,3 +181,34 @@ header {
   position: relative;
   top: -1px;
 }
+
+/* =========================================================
+   ICONS EFFECTS
+   ========================================================= */
+
+.fa-heart:hover,
+.fa-heart:focus {
+  color: rgb(204, 3, 3);
+}
+
+.fa-comment:hover,
+.fa-comment:focus {
+  color: rgba(62, 62, 255, 0.89);
+}
+
+.fa-paper-plane:hover,
+.fa-paper-plane:focus {
+  color: rgb(13, 158, 13);
+}
+
+.fa-heart:active {
+  color: rgba(204, 3, 3, 0.7);
+}
+
+.fa-comment:active {
+  color: rgba(62, 62, 255, 0.59);
+}
+
+.fa-paper-plane:active {
+  color: rgba(13, 158, 13, 0.7);
+}
