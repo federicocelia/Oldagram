@@ -59,61 +59,9 @@
 
     <main class="posts-container">
       <h1 class="visually-hidden">Oldagram feed</h1>
-      <!-- Posts Dynamically rendered here by JavaScript -->
-      <div class="post container-width">
-        <div class="post-title">
-          <div class="wrapper">
-            <img
-              src="./images/user-avatar.jpg"
-              alt="user-avatar-picture"
-              class="avatar profile-picture"
-            />
-          </div>
-          <div class="post-info">
-            <h2 class="bold big-text">Vincent Van Gogh</h2>
-            <p class="small-text">Zuderth, Netherlands</p>
-          </div>
-        </div>
-        <div class="post-img-container">
-          <img
-            src="./images/post-vangogh.jpg"
-            alt="Van Gogh Self-Portrait(1889)"
-            class="post-img"
-          />
-        </div>
-        <div class="post-socials-shares">
-          <div class="social-icons">
-            <i
-              class="icons fa-regular fa-heart"
-              role="button"
-              tabindex="0"
-              aria-label="Like post"
-            ></i>
 
-            <i
-              class="icons fa-regular fa-comment fa-rotate-270"
-              role="button"
-              tabindex="0"
-              aria-label="Comment post"
-            ></i>
-            <i
-              class="icons fa-regular fa-paper-plane fa-rotate-by"
-              style="--fa-rotate-angle: 20deg"
-              role="button"
-              tabindex="0"
-              aria-label="Share post"
-            ></i>
-          </div>
-          <div class="likes bold big-text">
-            <p class="small-text">21,492 likes</p>
-          </div>
-          <div class="comments">
-            <p class="small-text">
-              <span class="comment-author bold big-text">vincey1853</span> just
-              took a few mushrooms lol
-            </p>
-          </div>
-        </div>
+      <div id="rendering-container" class="rendering-container container-width">
+        <!-- Posts Dynamically rendered here by JavaScript -->
       </div>
     </main>
 
