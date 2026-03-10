@@ -10,6 +10,7 @@ export const posts = [
     isLiked: false,
     isCommented: false,
     isShared: false,
+    id: "01p",
   },
   {
     name: "Gustave Courbet",
@@ -22,6 +23,7 @@ export const posts = [
     isLiked: false,
     isCommented: false,
     isShared: false,
+    id: "02p",
   },
   {
     name: "Joseph Ducreux",
@@ -35,5 +37,6 @@ export const posts = [
     isLiked: false,
     isCommented: false,
     isShared: false,
+    id: "03p",
   },
 ];
