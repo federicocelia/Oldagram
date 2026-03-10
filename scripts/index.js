@@ -92,7 +92,10 @@ function iconInteraction() {
 
     if (!post) return;
 
-    if (event.target.closest(".fa-heart")) {
+    if (
+      event.target.closest(".fa-heart") ||
+      event.target.closest(".post-img")
+    ) {
       post.isLiked = !post.isLiked;
       post.likes += post.isLiked ? 1 : -1;
       render();
