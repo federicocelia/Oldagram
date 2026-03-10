@@ -67,3 +67,15 @@ function render() {
     })
     .join("");
 }
+
+renderingContainer.addEventListener("click", (event) => {
+  if (event.target.classList.contains("fa-heart")) {
+    event.target.classList.toggle("isLiked");
+  }
+  if (event.target.classList.contains("fa-comment")) {
+    event.target.classList.toggle("isCommented");
+  }
+  if (event.target.classList.contains("fa-paper-plane")) {
+    event.target.classList.toggle("isShared");
+  }
+});

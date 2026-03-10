@@ -190,17 +190,17 @@ header {
 
 .fa-heart:hover,
 .fa-heart:focus {
-  color: rgb(204, 3, 3);
+  opacity: 0.7;
 }
 
 .fa-comment:hover,
 .fa-comment:focus {
-  color: rgba(62, 62, 255, 0.89);
+  opacity: 0.7;
 }
 
 .fa-paper-plane:hover,
 .fa-paper-plane:focus {
-  color: rgb(13, 158, 13);
+  opacity: 0.7;
 }
 
 .fa-heart:active {
@@ -213,4 +213,19 @@ header {
 
 .fa-paper-plane:active {
   color: rgba(13, 158, 13, 0.7);
+}
+
+/* =========================================================
+   ICONS Js EFFECTS
+   ========================================================= */
+
+.isLiked {
+  color: rgb(204, 3, 3);
+}
+
+.isShared {
+  color: rgb(13, 158, 13);
+}
+.isCommented {
+  color: rgba(62, 62, 255, 0.89);
 }
