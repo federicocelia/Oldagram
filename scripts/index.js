@@ -4,14 +4,16 @@ console.log(posts);
 
 const renderingContainer = document.getElementById("rendering-container");
 
-document.addEventListener("DOMContentLoaded", render);
+document.addEventListener("DOMContentLoaded", () => {
+  render();
+  iconInteraction();
+});
 
 function render() {
-  iconInteraction();
   renderingContainer.innerHTML = posts
     .map((post) => {
       return `
-      <div id="${post.id}" class="post">
+      <div data-post-id="${post.id}" class="post">
         <div class="post-title">
           <div class="wrapper">
             <img
@@ -35,20 +37,20 @@ function render() {
         <div class="post-socials-shares">
           <div class="social-icons">
             <i
-              class="icons fa-regular fa-heart"
+              class="icons fa-regular fa-heart ${post.isLiked ? "isLiked" : ""}"
               role="button"
               tabindex="0"
               aria-label="Like post"
             ></i>
 
             <i
-              class="icons fa-regular fa-comment fa-rotate-270"
+              class="icons fa-regular fa-comment fa-rotate-270 ${post.isCommented ? "isCommented" : ""}"
               role="button"
               tabindex="0"
               aria-label="Comment post"
             ></i>
             <i
-              class="icons fa-regular fa-paper-plane fa-rotate-by"
+              class="icons fa-regular fa-paper-plane fa-rotate-by ${post.isShared ? "isShared" : ""}"
               style="--fa-rotate-angle: 20deg"
               role="button"
               tabindex="0"
@@ -71,14 +73,24 @@ function render() {
 
 function iconInteraction() {
   renderingContainer.addEventListener("click", (event) => {
-    if (event.target.classList.contains("fa-heart")) {
-      event.target.classList.toggle("isLiked");
-    }
-    if (event.target.classList.contains("fa-comment")) {
-      event.target.classList.toggle("isCommented");
-    }
-    if (event.target.classList.contains("fa-paper-plane")) {
-      event.target.classList.toggle("isShared");
+    const postEl = event.target.closest(".post");
+    if (!postEl) return;
+
+    const postId = postEl.dataset.postId;
+    const post = posts.find((p) => p.id == postId);
+
+    if (!post) return;
+
+    if (event.target.closest(".fa-heart")) {
+      post.isLiked = !post.isLiked;
+      post.likes += post.isLiked ? 1 : -1;
+      render();
+    } else if (event.target.closest(".fa-comment")) {
+      post.isCommented = !post.isCommented;
+      render();
+    } else if (event.target.closest(".fa-paper-plane")) {
+      post.isShared = !post.isShared;
+      render();
     }
   });
 }
