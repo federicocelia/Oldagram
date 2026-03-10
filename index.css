@@ -100,8 +100,9 @@ header {
    ========================================================= */
 
 .post-img {
+  display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -171,6 +172,21 @@ header {
   position: relative;
 }
 
+.icon-button {
+  background-color: white;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  line-height: 1;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
 /* =========================================================
    ICON-SPECIFIC OPTICAL TWEAKS
    ========================================================= */
@@ -181,7 +197,7 @@ header {
 
 .fa-paper-plane {
   position: relative;
-  top: -1px;
+  top: 0px;
 }
 
 /* =========================================================

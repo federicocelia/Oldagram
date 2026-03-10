@@ -36,26 +36,37 @@ function render() {
         </div>
         <div class="post-socials-shares">
           <div class="social-icons">
+            <button
+            type="button"
+            class="icon-button"
+            aria-label="Like post"
+            aria-pressed="${post.isLiked}"
+            >
             <i
               class="icons fa-regular fa-heart ${post.isLiked ? "isLiked" : ""}"
-              role="button"
-              tabindex="0"
-              aria-label="Like post"
             ></i>
-
+            </button>
+            <button
+            type="button"
+            class="icon-button"
+            aria-label="Comment post"
+            aria-pressed="${post.isCommented}"
+            >
             <i
-              class="icons fa-regular fa-comment fa-rotate-270 ${post.isCommented ? "isCommented" : ""}"
-              role="button"
-              tabindex="0"
-              aria-label="Comment post"
+            class="icons fa-regular fa-comment ${post.isCommented ? "isCommented" : ""}"
             ></i>
+            </button>
+            <button
+            type="button"
+            class="icon-button"
+            aria-label="Share post"
+            aria-pressed="${post.isShared}"
+            >
             <i
               class="icons fa-regular fa-paper-plane fa-rotate-by ${post.isShared ? "isShared" : ""}"
               style="--fa-rotate-angle: 20deg"
-              role="button"
-              tabindex="0"
-              aria-label="Share post"
             ></i>
+            </button>
           </div>
           <div class="likes bold big-text">
             <p class="small-text">${post.likes} likes</p>
